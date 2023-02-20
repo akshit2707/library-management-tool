@@ -14,12 +14,13 @@ import java.util.logging.Logger;
 public class UserService {
     @Autowired
     UserRepository userRepository;
-    public UserEntity getUser(String id){
-      Optional<UserEntity> data = userRepository.findById(id);
-      if(data.isPresent())
+
+    public UserEntity getUser(String id) {
+        Optional<UserEntity> data = userRepository.findById(id);
+        if (data.isPresent())
             return data.get();
-      else
-          log.error("No data present");
-      return null;
+        else
+            log.error("No data present");
+        return null;
     }
 }
