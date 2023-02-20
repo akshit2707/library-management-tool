@@ -1,6 +1,6 @@
 package com.library.users.service;
 
-import com.library.users.entity.UserEntity;
+import com.library.users.entity.UserResponse;
 import com.library.users.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public UserEntity getUser(String id) {
-        Optional<UserEntity> data = userRepository.findById(id);
+    public UserResponse getUser(String id) {
+        Optional<UserResponse> data = userRepository.findById(id);
         if (data.isPresent())
             return data.get();
         else

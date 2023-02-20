@@ -1,6 +1,6 @@
 package com.library.users.repository;
 
-import com.library.users.entity.UserEntity;
+import com.library.users.entity.UserResponse;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +14,6 @@ import java.util.Optional;
 import java.util.function.Function;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserEntity, String> {
+public interface UserRepository extends JpaRepository<UserResponse, String> {
 
 }
