@@ -12,7 +12,6 @@ import java.util.logging.Logger;
 @Service
 @Slf4j
 public class UserService {
-    Logger logger = new Logger();
     @Autowired
     UserRepository userRepository;
     public UserEntity getUser(String id){
